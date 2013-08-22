@@ -7,6 +7,8 @@ class VisionInstance
 private:
 	static VisionInstance *m_instance;
 	VisionSubsystemV2 *visionSubsystemV2;
+
+	int boolToInt(bool boolValue);
 	
 public:
 	enum Target {

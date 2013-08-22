@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;C:\Program Files (x86)\Java\jdk1.7.0_17\include&quot;;&quot;C:\Program Files (x86)\java\jdk1.7.0_17\include\win32&quot;;&quot;C:\Program Files (x86)\National Instruments\Vision\Include&quot;"
+				AdditionalIncludeDirectories="&quot;C:\Program Files (x86)\Java\jdk1.7.0_17\include&quot;;&quot;C:\Program Files (x86)\java\jdk1.7.0_17\include\win32&quot;;&quot;C:\Program Files (x86)\National Instruments\Vision\Include&quot;;.\DriverStationTargetingLib\"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;DRIVERSTATIONTARGETINGLIB_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -213,6 +213,94 @@
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
+		</Filter>
+		<Filter
+			Name="Commands"
+			>
+			<File
+				RelativePath=".\Commands\Subsystem.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Vision"
+			>
+			<File
+				RelativePath=".\Vision\BinaryImage.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\BinaryImage.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\ColorImage.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\ColorImage.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\HSLImage.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\HSLImage.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\ImageBase.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\ImageBase.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\MonoImage.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\MonoImage.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\Threshold.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision\Threshold.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Vision2009"
+			>
+			<File
+				RelativePath=".\Vision2009\BaeUtilities.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision2009\BaeUtilities.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision2009\FrcError.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision2009\FrcError.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision2009\VisionAPI.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vision2009\VisionAPI.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

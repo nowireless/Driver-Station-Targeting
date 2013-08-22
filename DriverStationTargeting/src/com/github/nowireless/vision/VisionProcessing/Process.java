@@ -15,13 +15,17 @@ public class Process {
    
     private PutStatsToRobot statsToRobot;
     public void Initialize() {
-        //statsToRobot = new PutStatsToRobot();
-        //statsToRobot.Initialize();
+        statsToRobot = new PutStatsToRobot();
+        statsToRobot.Initialize("127.0.0.1");
     }
     
     public void Run() {
         NativeMethods.ProcessImage();
-        /*statsToRobot.PutStats(
+        System.out.println(
+                "High "+ NativeMethods.GetTargetDistance(NativeMethods.Target.High) +
+                " Middle " +NativeMethods.GetTargetDistance(NativeMethods.Target.Middle) +
+                " SecMiddle "+ NativeMethods.GetTargetDistance(NativeMethods.Target.SecondMiddle));
+        statsToRobot.PutStats(
                 NativeMethods.IsTargetVisable(NativeMethods.Target.High), 
                 NativeMethods.IsTargetVisable(NativeMethods.Target.Middle), 
                 NativeMethods.IsTargetVisable(NativeMethods.Target.SecondMiddle), 
@@ -31,7 +35,7 @@ public class Process {
                 NativeMethods.GetTargetAzimuth(NativeMethods.Target.High), 
                 NativeMethods.GetTargetAzimuth(NativeMethods.Target.Middle), 
                 NativeMethods.GetTargetAzimuth(NativeMethods.Target.SecondMiddle));
-                */
+               
     }
         
 }

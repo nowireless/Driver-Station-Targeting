@@ -12,29 +12,27 @@ public class PutStatsToRobot {
     private NetworkTable table;
     
     public void Initialize() {
-        NetworkTable.setClientMode();
-        NetworkTable.setIPAddress("10.30.81.2");
-        table = NetworkTable.getTable("Vision");
+        Initialize("10.30.81.2");
    }
     
     public void Initialize(String networkTableServer) {
         NetworkTable.setClientMode();
-        NetworkTable.setIPAddress("10.30.81.2");
+        NetworkTable.setIPAddress(networkTableServer);
         table = NetworkTable.getTable("Vision");
     }
     
-    public void PutStats(boolean isHighTargetVisable, 
-                         boolean isMiddleTargetVisable,
-                         boolean isSecondMiddleTargetVisable,
+    public void PutStats(int isHighTargetVisable, 
+                         int isMiddleTargetVisable,
+                         int isSecondMiddleTargetVisable,
                          double highTargetDistance,
                          double middleTagetDistance,
                          double secondTargetDistance,
                          double highTargetAzimuth,
                          double middleTargetAzimuth,
                          double secondMiddleTargetAzimuth) {
-        table.putBoolean("High Target Visibility", isHighTargetVisable);
-        table.putBoolean("Middle Target Visibility", isMiddleTargetVisable);
-        table.putBoolean("Second Middle Target Visibility", isSecondMiddleTargetVisable);
+        table.putNumber("High Target Visibility", isHighTargetVisable);
+        table.putNumber("Middle Target Visibility", isMiddleTargetVisable);
+        table.putNumber("Second Middle Target Visibility", isSecondMiddleTargetVisable);
         
         table.putNumber("High Target Distance", highTargetDistance);
         table.putNumber("Middle Target Distance", middleTagetDistance);

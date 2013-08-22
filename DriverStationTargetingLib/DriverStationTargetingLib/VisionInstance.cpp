@@ -24,16 +24,16 @@ void VisionInstance::DeleteInstance() {
 }
 
 void VisionInstance::Process() {
-	printf("Process From c++\n");
+	visionSubsystemV2->ProcessImageFromFileSystem(".\\25feet.jpg");
 }
 
 double VisionInstance::GetTargetAzimuth(VisionInstance::Target target) {
 	if(target == High) {
-		return 1;
+		return visionSubsystemV2->GetHighTargetAzimuth();
 	} else if(target == Middle) {
-		return 2;
+		return visionSubsystemV2->GetMiddleTargetAzimuth();
 	} else if(target == SecondMiddle) {
-		return 3;
+		return visionSubsystemV2->GetSecondMiddleTargetAzimuth();
 	} else {
 		return -1;
 	}
@@ -41,11 +41,11 @@ double VisionInstance::GetTargetAzimuth(VisionInstance::Target target) {
 
 double VisionInstance::GetTargetDistance(Target target) {
 	if(target == High) {
-		return 4;
+		return visionSubsystemV2->GetHighTargetDistance();
 	} else if(target == Middle) {
-		return 5;
+		return visionSubsystemV2->GetMiddleTargetDistance();
 	} else if(target == SecondMiddle) {
-		return 6;
+		return visionSubsystemV2->GetSecondMiddleTargetDistance();
 	} else {
 		return -1;
 	}
@@ -53,10 +53,18 @@ double VisionInstance::GetTargetDistance(Target target) {
 
 int VisionInstance::IsTargetVisable(Target target) {
 	if(target == High) {
-		return 1;
+		return boolToInt(visionSubsystemV2->IsHighTargetVisable());
 	} else if(target == Middle) {
-		return 1;
+		return boolToInt(visionSubsystemV2->IsMiddleTargetVisable());
 	} else if(target == SecondMiddle) {
+		return boolToInt(visionSubsystemV2->IsSecondMiddleTargetVisable());
+	} else {
+		return 0;
+	}
+}
+
+int VisionInstance::boolToInt(bool boolValue){
+	if(boolValue) {
 		return 1;
 	} else {
 		return 0;

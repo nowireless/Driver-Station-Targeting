@@ -31,6 +31,9 @@ public class DriverStationTargeting {
         NativeMethods.Initialize();
         Process process = new Process();
         process.Initialize();
+        
+        //process.Run();
+        
         while(true) {
             process.Run();
             System.out.println("Running");
